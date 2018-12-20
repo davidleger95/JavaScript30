@@ -18,29 +18,40 @@
     }
 
     // Regular
-
+    console.log('hello');
     // Interpolated
-
+    console.log('Hello I am a %s string', 'x');
     // Styled
-
+console.log('%cHELLO WORLD', 'font-size: 50px');
     // warning!
-
+    console.warn('heeyyy');
     // Error :|
-
+    console.error('dang...');
     // Info
-
+    console.info('The average person eats 8 copies of Shrek 3D in their lifetime while sleeping.')
     // Testing
-
+    const p = document.querySelector('p');
+    console.assert(p.classList.contains('ouch'), 'Wrong!')
     // clearing
-
+    console.clear();
     // Viewing DOM Elements
-
+    console.log(p);
+    console.dir(p);
     // Grouping together
-
+    console.clear()
+    console.table(dogs)
     // counting
-
+    console.count('Wes');
+    console.count('Wes');
+    console.count('Wes');
     // timing
-
+    console.time('fetching data');
+    fetch('https://api.github.com/users/davidleger95')
+      .then(data => data.json())
+      .then(data => {
+        console.timeEnd('fetching data');
+        console.log(data);
+      });
   </script>
 </body>
 </html>
